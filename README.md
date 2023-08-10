@@ -6,7 +6,7 @@
 
 
 ## Contenido
-  - [Introducción a Scripting con PowerShell](#introducción)
+  - [Introducción a Scripting con PowerShell](#introducción-a-scripting-con-powershell)
     - [Variables](#variables)
     - [Uso de comillas](#uso-de-comillas)
     - [Comentarios](#comentarios)
@@ -17,7 +17,7 @@
     - [Manejo de errores](#manejor-de-errores)
   - [Ejecución en segundo plano](#ejecucion-segundo-plano)
 
-## Introducción
+## Introducción a Scripting con PowerShell
 PowerShell (originalmente llamada Windows PowerShell) es una interfaz de consola (CLI) con posibilidad de escritura y unión de comandos por medio de instrucciones (scripts en inglés). Esta interfaz de consola está diseñada para su uso por parte de administradores de sistemas con el propósito de automatizar tareas o realizarlas de forma más controlada. Originalmente denominada como MONAD en 2003, su nombre oficial cambió al actual cuando fue lanzada al público el 25 de abril de 2006. El 15 de agosto de 2016, Microsoft publicó el código fuente de PowerShell en GitHub y cambió su nombre a PowerShell Core. La versión 6 se ofrece con licencia MIT.
 
 Durante la cursada de la materia, utilizaremos PowerShell 7. Para verificar la versión de PowerShell instalada, ejecutar en la consola el siguiente comando:
@@ -76,6 +76,6 @@ se encierra entre <# y #>
 
 ## Uso de la ayuda
 
-# Manejo de errores
+## Manejo de errores
 
-# Ejecución en segundo plano
+## Ejecución en segundo plano
