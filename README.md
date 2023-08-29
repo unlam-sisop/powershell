@@ -1,7 +1,7 @@
 # PowerShell
 ## Guia téorica y práctica sobre PowerShell
 ### Sistemas Operativos
-Última revisión Abril 2021
+Última revisión Agosto 2023
 
 # 
 # Contenido
@@ -74,11 +74,11 @@ Fuente: Windows PowerShell - [Microsoft docs](https://docs.microsoft.com/es-ES/p
 Para la creación y prueba de los scripts utilizaremos la versión 7.0 LTS de PowerShell, debido a que es compatible con Net Core. La última versión disponible a la fecha es 7.1 y se recomienda tener actualizado el sistema a la última versión.
 ## Windows
 Por defecto con Windows 10 se encuentra instalada la versión 6.0 de PS Core. Verifique la versión que dispone y en caso de ser necesario siga los pasos de la 
-[guía de instalación oficial](https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7.1).
+[guía de instalación oficial](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3).
 
 Para instalar PowerShell en Windows, descargue el [paquete de instalación más reciente](https://aka.ms/powershell-release?tag=stable) de GitHub.
 ## Linux
-PowerShell se encuentra disponible para las principales [distros de Linux](https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1).
+PowerShell se encuentra disponible para las principales [distros de Linux](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.3).
 A modo de ejemplo, a continuación enumeramos los pasos necesarios para instalarlo en Ubuntu.
 ### Instalación mediante un repositorio de paquetes, Ubuntu
 ```bash
@@ -87,9 +87,11 @@ sudo apt-get update
 # Install pre-requisite packages.
 sudo apt-get install -y wget apt-transport-https software-properties-common
 # Download the Microsoft repository GPG keys
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
 # Register the Microsoft repository GPG keys
 sudo dpkg -i packages-microsoft-prod.deb
+# Delete the the Microsoft repository GPG keys file
+rm packages-microsoft-prod.deb
 # Update the list of packages after we added packages.microsoft.com
 sudo apt-get update
 # Install PowerShell
@@ -105,12 +107,11 @@ sudo apt-get remove powershell
 ## Mac
 PowerShell 7.0 o posteriores requiere macOS 10.13 y versiones posteriores. Una vez instalado el paquete, ejecute `pwsh` desde un terminal.
 
-Existen varias maneras de [instalar PowerShell en macOS](https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7.1):
+Existen varias maneras de [instalar PowerShell en macOS](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.3):
   * Realice la instalación mediante Homebrew. [Homebrew](https://brew.sh/) es el administrador de paquetes preferido de macOS.
-  * Realice la instalación de PowerShell mediante [descarga directa](https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7.1#installation-via-direct-download).
-  * Realice la instalación a partir de [archivos binarios](https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7.1#binary-archives).
+  * Realice la instalación de PowerShell mediante [descarga directa](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.3#installation-via-direct-download).
 
-Después de instalar PowerShell, debe instalar [OpenSSL](https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-7.1#installing-dependencies). OpenSSL se necesita para la comunicación remota de PowerShell y las operaciones de CIM.
+Después de instalar PowerShell, debe instalar [OpenSSL](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.3&viewFallbackFrom=powershell-7.1#installing-dependencies). OpenSSL se necesita para la comunicación remota de PowerShell y las operaciones de CIM.
 
 ### Instalación de la versión estable más reciente a través de Homebrew en macOS 10.13 o posterior (Recomendado)
 ```
