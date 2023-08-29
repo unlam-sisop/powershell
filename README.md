@@ -76,7 +76,12 @@ Para la creación y prueba de los scripts utilizaremos la versión 7.0 LTS de Po
 Por defecto con Windows 10 se encuentra instalada la versión 6.0 de PS Core. Verifique la versión que dispone y en caso de ser necesario siga los pasos de la 
 [guía de instalación oficial](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3).
 
-Para instalar PowerShell en Windows, descargue el [paquete de instalación más reciente](https://aka.ms/powershell-release?tag=stable) de GitHub.
+Para instalar PowerShell en Windows, descargue el [paquete de instalación más reciente](https://aka.ms/powershell-release?tag=stable) de GitHub o utilizando el gestor de paquetes de Windows corriendo el siguiente comando:
+
+```powershell
+winget install Microsoft.PowerShell
+```
+
 ## Linux
 PowerShell se encuentra disponible para las principales [distros de Linux](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.3).
 A modo de ejemplo, a continuación enumeramos los pasos necesarios para instalarlo en Ubuntu.
@@ -129,7 +134,7 @@ Si bien el desarrollo de los scripts se puede realizar en cualquier editor de te
 ## Windows PowerShell ISE
 Windows PowerShell Integrated Scripting Environment (ISE) es una aplicación host de Windows PowerShell. En el ISE, puede ejecutar comandos y escribir, probar y depurar scripts en una única interfaz gráfica de usuario basada en Windows. El ISE proporciona edición de varias líneas, finalización con tabulación, color de sintaxis, ejecución selectiva, ayuda contextual y compatibilidad con idiomas de derecha a izquierda.
 ### Para iniciar Windows PowerShell ISE
-Haga clic en Inicio , seleccione Windows PowerShell y, después, haga clic en Windows PowerShell ISE. Como alternativa, puede escribir powershell_ise.exe en cualquier shell de comandos o en el cuadro Ejecutar.
+Haga clic en Inicio, seleccione Windows PowerShell y, después, haga clic en Windows PowerShell ISE. Como alternativa, puede escribir powershell_ise.exe en cualquier shell de comandos o en el cuadro Ejecutar.
 ## Visual Studio Code (Recomendado)
 [Visual Studio Code](https://code.visualstudio.com/) es un editor de scripts multiplataforma de Microsoft. Junto con la [extensión de PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell), proporciona una experiencia de edición de scripts enriquecida e interactiva que facilita la escritura de scripts confiables de PowerShell. Visual Studio Code con la extensión de PowerShell es el editor recomendado para escribir scripts de PowerShell.
 
@@ -1021,7 +1026,7 @@ Dentro de la especificación existen varias secciones que son las que luego se m
 - .Outputs
 
 A continuación se muestra un ejemplo básico de estas secciones:
-```powershell 
+```powershell
 <#
 .Synopsis
    Short description
@@ -1052,7 +1057,7 @@ function Set-Help {
 ```
 
 Agregando la sección de ayuda a la función `Get-Factorial` obtenemos el siguiente resultado:
-```powershell 
+```powershell
 <#
 .Synopsis
 Esta función calcula el factorial de un número de manera recursiva
