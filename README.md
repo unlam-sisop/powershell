@@ -508,11 +508,11 @@ Param(
   [Parameter(Mandatory=$true)]
   [ValidateNotNullOrEmpty()]
   [ValidateRange(1,10)]
-  [int] $entero
+  [int] $entero,
 
   [Parameter(Mandatory=$true)]
   [ValidateScript({$_ -ge (Get-Date)})]
-  [DateTime] $fecha
+  [DateTime] $fecha,
 
   [Parameter(Mandatory=$true)]
   [ValidateSet("Bien", "Mal", "Regular")]
