@@ -43,9 +43,9 @@
 #
 # Introducción
 ## ¿Qué es PowerShell?
-PowerShell es una solución de automatización de tareas multiplataforma formada por un shell de línea de comandos, un lenguaje de scripting y un marco de administración de configuración. PowerShell funciona en Windows 10, Linux y macOS.
+PowerShell es una solución de automatización de tareas multiplataforma formada por un shell de línea de comandos, un lenguaje de scripting y un marco de administración de configuración. PowerShell funciona en Windows 7 o superior, Linux y macOS.
 
-A lo largo de los años ha habido muchas versiones de PowerShell. Inicialmente, Windows PowerShell se compiló en .NET Framework y solo funcionaba en los sistemas Windows. Con la versión actual, PowerShell usa .NET 5.0 como entorno de ejecución.
+A lo largo de los años ha habido muchas versiones de PowerShell. Inicialmente, Windows PowerShell se compiló en .NET Framework y solo funcionaba en los sistemas Windows. Con la versión actual, PowerShell usa .NET 7.0 como entorno de ejecución.
 ## Shell
 PowerShell es un shell de comandos moderno que incluye las mejores características de otros shells populares. A diferencia de la mayoría de los shells que solo aceptan y devuelven texto, PowerShell acepta y devuelve objetos .NET. El shell incluye las siguientes características:
 * Un historial de línea de comandos sólido.
@@ -71,7 +71,7 @@ Fuente: Windows PowerShell - [Microsoft docs](https://docs.microsoft.com/es-ES/p
 
 #
 # Instalar PowerShell Core
-Para la creación y prueba de los scripts utilizaremos la versión 7.0 LTS de PowerShell, debido a que es compatible con Net Core. La última versión disponible a la fecha es 7.1 y se recomienda tener actualizado el sistema a la última versión.
+Para la creación y prueba de los scripts utilizaremos la versión 7.2 LTS de PowerShell, debido a que es compatible con Net Core. La última versión disponible a la fecha es 7.3 y se recomienda tener actualizado el sistema a la última versión.
 ## Windows
 Por defecto con Windows 10 se encuentra instalada la versión 6.0 de PS Core. Verifique la versión que dispone y en caso de ser necesario siga los pasos de la 
 [guía de instalación oficial](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3).
