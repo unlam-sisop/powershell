@@ -271,6 +271,19 @@ Get-Process | Select-Object -Property ProcessName, Id, WS
 
 En este caso se seleccionan las Propiedades ProcessName, Id y WS. Los valores a utilizar se pueden obtener como ya vimos previamente con el cmdlet Get-Member
 
+## Invocación de Métodos via pipe
+Al ser un objeto lo que se recibe por el pipe, además de trabajar con las propiedades podesmos invocar sus mátodos. Se utiliza la variable especial $_ que devuelve una referencia al array de objetos recibido por el pipe. Para poder invocar el método se tiene que hacer para cada objeto (un método no puede ejecutar sobre el array de objetos), usamos el cmdlet ForEach-Object, que también tiene un alias "%"
+
+```powershell
+Get-Process | Get-Member
+# Abro un Notpad
+Notepad
+# Filtramos el proceso del Notepad en ejecución
+Get-Process | Where-Object ProcessName -eq "notepad"
+# Finalmente llamaremos al método Kill() para finalizarlo, para cada objeto recibido
+Get-Process | Where-Object ProcessName -eq "notepad" | ForEach-Object { $_.Kill() }
+```
+
 #
 # Sintaxis de los scripts
 ## Variables
