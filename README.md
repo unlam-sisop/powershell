@@ -1,7 +1,7 @@
 # PowerShell
 ## Guia téorica y práctica sobre PowerShell
-### Sistemas Operativos
-Última revisión Agosto 2023
+### Sistemas Operativos / Virtualización de hardware
+Última revisión Septiembre 2024
 
 # 
 # Contenido
@@ -76,7 +76,7 @@ Para la creación y prueba de los scripts utilizaremos la versión 7.2 LTS de Po
 Por defecto con Windows 10 se encuentra instalada la versión 6.0 de PS Core. Verifique la versión que dispone y en caso de ser necesario siga los pasos de la 
 [guía de instalación oficial](https://learn.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3).
 
-Para instalar PowerShell en Windows, descargue el [paquete de instalación más reciente](https://aka.ms/powershell-release?tag=stable) de GitHub o utilizando el gestor de paquetes de Windows corriendo el siguiente comando:
+Para instalar PowerShell en Windows, descargue el [paquete de instalación más reciente](https://aka.ms/powershell-release?tag=stable) de GitHub o utilice el gestor de paquetes de Windows corriendo el siguiente comando:
 
 ```powershell
 winget install Microsoft.PowerShell
@@ -131,20 +131,23 @@ brew upgrade powershell --cask
 #
 # IDE
 Si bien el desarrollo de los scripts se puede realizar en cualquier editor de texto, los siguientes IDEs son los recomendados para ser utilizados cuando trabajamos con PowerShell.
-## Windows PowerShell ISE
-Windows PowerShell Integrated Scripting Environment (ISE) es una aplicación host de Windows PowerShell. En el ISE, puede ejecutar comandos y escribir, probar y depurar scripts en una única interfaz gráfica de usuario basada en Windows. El ISE proporciona edición de varias líneas, finalización con tabulación, color de sintaxis, ejecución selectiva, ayuda contextual y compatibilidad con idiomas de derecha a izquierda.
-### Para iniciar Windows PowerShell ISE
-Haga clic en Inicio, seleccione Windows PowerShell y, después, haga clic en Windows PowerShell ISE. Como alternativa, puede escribir powershell_ise.exe en cualquier shell de comandos o en el cuadro Ejecutar.
-## Visual Studio Code (Recomendado)
+## Visual Studio Code (recomendado)
 [Visual Studio Code](https://code.visualstudio.com/) es un editor de scripts multiplataforma de Microsoft. Junto con la [extensión de PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell), proporciona una experiencia de edición de scripts enriquecida e interactiva que facilita la escritura de scripts confiables de PowerShell. Visual Studio Code con la extensión de PowerShell es el editor recomendado para escribir scripts de PowerShell.
 
 ![VS Code extension](https://docs.microsoft.com/es-mx/powershell/docs-conceptual/dev-cross-plat/vscode/media/using-vscode/vscode.png?view=powershell-7.1)
 
+## Windows PowerShell ISE
+Windows PowerShell Integrated Scripting Environment (ISE) es una aplicación host de Windows PowerShell. En el ISE, puede ejecutar comandos y escribir, probar y depurar scripts en una única interfaz gráfica de usuario basada en Windows. El ISE proporciona edición de varias líneas, finalización con tabulación, color de sintaxis, ejecución selectiva, ayuda contextual y compatibilidad con idiomas de derecha a izquierda.
+
+Windows PowerShell ISE es solo compatible con versiones de PowerShell menores a 5.1, por lo que no se recomienda su utilización.
+### Para iniciar Windows PowerShell ISE
+Haga clic en Inicio, seleccione Windows PowerShell y, después, haga clic en Windows PowerShell ISE. Como alternativa, puede escribir powershell_ise.exe en cualquier shell de comandos o en el cuadro Ejecutar.
+
 # CLI
 Al igual que sucede con Bash, PowerShell (PS) hace uso de un interprete y desde el mismo se pueden ejecutar tres tipos de comandos: 
-  * cmdlets 
-  * scripts
-  * programas ejecutables (binarios)
+  * cmdlets.
+  * Scripts.
+  * Programas ejecutables (binarios).
 ## cmdlets en PowerShell
 Un cmdlet es un comando único que participa en la semántica de canalización de PowerShell y, normalmente, devuelve un objeto .NET. Los cmdlets son comandos de PowerShell nativos, no ejecutables independientes. Los cmdlets se recopilan en módulos de PowerShell que se pueden cargar a petición. Los cmdlets se pueden escribir en cualquier lenguaje .NET compilado o en el mismo lenguaje de scripting de PowerShell.
 
@@ -1112,7 +1115,7 @@ A continuación una lista de los cmdlets más usados:
   - Sort-Object
 - Procesos y datos del sistema:
   - Get-Process
-  - Get-WmiObject
+  - Get-WmiObject (solo Windows)
   - Get-Counter
   - Test-Connection (ping)
   - Add-Type (agrega bibliotecas de .Net)
