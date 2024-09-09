@@ -1,6 +1,6 @@
 # PowerShell
 ## Guia téorica y práctica sobre PowerShell
-### Sistemas Operativos / Virtualización de hardware
+### Sistemas Operativos & Virtualización de Hardware
 Última revisión Septiembre 2024
 
 # 
